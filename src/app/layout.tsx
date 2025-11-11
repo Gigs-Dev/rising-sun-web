@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={founders.variable}>
-      <body className="bg-[#0a0a0a]">
+      <body className="bg-[#1D2342]">
         <QueryClientWrapper>
            {children}
         </QueryClientWrapper>

@@ -43,7 +43,7 @@ const Header = () => {
     <Flex className="fixed top-[1px] left-0 w-full md:justify-around justify-between px-4 py-5 bg-transparent z-50">
       {/* Links container */}
       <Flex
-        className={`lg:flex border border-[#555] rounded-[10px] px-3 py-1.5 bg-transparent backdrop-blur gap-8 w-full justify-between items-center lg:max-w-[1024px] lg:mx-auto relative h-[77px]`}
+        className={`lg:flex border border-[#555] rounded-[10px] px-3 py-1.5 bg-[#2D2D3E] backdrop-blur gap-8 w-full justify-between items-center lg:max-w-[1024px] lg:mx-auto relative h-[77px]`}
       >
         <Box className="ml-[1rem]">
           <Image
@@ -85,7 +85,7 @@ const Header = () => {
                   {item.name}
                 </Box>
             ))}
-            <Button className="inline-flex md:hidden  bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer">
+            <Button className="inline-flex lg:hidden  bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer">
                 <Image
                   priority
                   src={userIcon}
@@ -107,7 +107,7 @@ const Header = () => {
             <HStack
               className={`${
                 isMenuOpen ? "border border-[#555]" : ""
-              } hidden md:inline-flex bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer`}
+              } hidden lg:inline-flex bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer`}
             >
               <Image
                 priority
