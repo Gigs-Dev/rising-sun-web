@@ -1,8 +1,8 @@
 export const TopBarData = [
-  {
-    name: "Transactions",
-    link: "transactions",
-  },
+{
+  name: "Help Center",
+  link: "help-center",
+ },
   {
     name: "How to play?",
     link: "about",
