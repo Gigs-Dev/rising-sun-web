@@ -25,6 +25,15 @@
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 body {
   color: var(--foreground);
   background: radial-gradient(

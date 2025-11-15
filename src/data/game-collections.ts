@@ -30,3 +30,26 @@ export const GameCollectionsList = [
   //   icon: '',
   // },
 ];
+
+
+export const popularGamesList = [
+  {
+    name: 'Card Flip',
+    link: '/spin',
+    desc: 'Flip cards by predicting the number',
+    icon: '/games/card-flip.png'
+  },
+  {
+    name: 'EvenOdd',
+    link: '/even-odd',
+    desc: 'Choose your number base and get the state',
+    icon: '/games/even-odd.svg'
+  },
+  {
+    name: 'Guess & Win',
+    link: '/guess',
+    desc: 'Live guessing and more.....',
+    icon: '/games/guess-win.svg'
+  },
+
+]

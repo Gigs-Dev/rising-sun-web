@@ -40,7 +40,7 @@ const Header = () => {
 
 
   return (
-    <Flex className="fixed top-[1px] left-0 w-full md:justify-around justify-between px-4 py-5 bg-transparent z-50">
+    <Flex className="fixed top-[1px] left-0 w-full md:justify-around justify-between px-4 py-5 bg-transparent z-50 ">
       {/* Links container */}
       <Flex
         className={`lg:flex border border-[#555] rounded-[10px] px-3 py-1.5 bg-[#2D2D3E] backdrop-blur gap-8 w-full justify-between items-center lg:max-w-[1024px] lg:mx-auto relative h-[77px]`}

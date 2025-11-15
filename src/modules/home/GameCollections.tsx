@@ -7,20 +7,22 @@ import Link from 'next/link'
 
 
 
+
 const GameCollections = () => {
   return (
     <Box className="mt-[5rem] mx-auto min-h-[925px] py-3">
       <Box className="flex flex-col items-center justify-center">
-        <Text className="text-center font-medium text-[1.4rem] md:text-[2.1rem] tracking-[.1px] mb-[1rem] mt-3 px-[5rem] inline-flex">
+        <Text className="text-center font-medium text-[1.4rem] md:text-[2.1rem] tracking-[.1px] mb-[1rem] mt-3 px-2 lg:px-[5rem] inline-flex">
           BET SMART .  PLAY BIG  . WIN BIGGER 
         </Text>
 
-         <Text className="text-center font-medium text-[1.4rem] md:text-[1.1rem] mb-[1rem]  px-[5rem] w-[680px]">
+         <Text className="text-center font-medium text-[14px] lg:text-[1.4rem] md:text-[1.1rem] mb-[1rem] px-1 lg:px-[4rem] w-full lg:w-[680px]">
          Choose your favorite game, place your bet, and experience the thrill. We’ve got something for every player — anytime, anywhere
         </Text>
       </Box>
 
       <Box className="flex flex-col items-center">
+        
         {/* GAME LISTING */}
         <HStack className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 justify-center items-center">
           {GameCollectionsList.map((game) => {
