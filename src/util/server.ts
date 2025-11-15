@@ -24,12 +24,12 @@ SERVER.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Optional: Response interceptor
+//Response interceptor
 SERVER.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-     throw error
+     throw new Error('Error', error)
     }
     return Promise.reject(error);
   }

@@ -4,7 +4,7 @@ import Header from "@/ui/components/Header";
 
 const MainLayout = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <Box className="min-h-screen flex flex-col">
+    <Box className="flex h-full flex-col">
       <Header />
       <Box className="flex-grow">
         <Box className="flex-grow md:p-[5rem] p-[1rem]">{children}</Box>
