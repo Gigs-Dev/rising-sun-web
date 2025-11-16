@@ -76,14 +76,14 @@ const Header = () => {
             >
 
             {TopBarData.map((item) => (
-                <Box
+                <Link href={item.link}
                 key={item.name}
                 className={`text-[.9rem] cursor-pointer pt-1 ${
                   isMenuOpen ? "py-[20px]" : "py-[0px]"
                 } font-regular`}
                 >
                   {item.name}
-                </Box>
+                </Link>
             ))}
             {token ?
             (
@@ -118,7 +118,7 @@ const Header = () => {
   
 
           {/*  */}
-          {( token ) ? (
+          {( !token ) ? (
             <HStack
               className={`${
                 isMenuOpen ? "border border-[#555]" : ""
