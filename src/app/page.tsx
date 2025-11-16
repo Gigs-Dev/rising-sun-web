@@ -5,6 +5,7 @@ import PlayersBase from "@/modules/home/PlayersBase";
 import MainLayout from "@/store/home";
 import { Box } from "@/ui/primitives/ui-layout";
 import HowItWorks from "@/modules/home/HowItWorks";
+import JoinNow from "@/modules/home/JoinNow";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
         <HeroBox />
         <GameCollections />
         <PopularGames/>
-        <PlayersBase />
+        <JoinNow/>
+        {/* <PlayersBase /> */}
       </MainLayout>
     </Box>
   );

@@ -1,13 +1,19 @@
-import { howItWorksList } from '@/data/game-collections';
+import { howItWorksCardList, howItWorksList } from '@/data/game-collections';
 import { Button } from '@/ui/primitives/buttons/Button';
 import { Text } from '@/ui/primitives/typography';
 import { Flex, Box } from '@/ui/primitives/ui-layout';
+import Image from 'next/image';
 import React from 'react'
+
+
+// ICONS
+import HIWorks from '@/svgs/games/hiworks.svg'
 
 const HowItWorks = () => {
   return (
     <div className='mt-[50px] w-full'>
-        <Flex className='h-[504px] bg-[#2D2D3E] w-[80%] rounded-tr-[32px] rounded-br-[32px] flex items-center'>
+       {/* HOW IT WORKS SECTION */}
+        <Flex className='h-full lg:h-[504px] bg-[#2D2D3E] w-full lg:w-[80%] lg:rounded-tr-[32px] lg:rounded-br-[32px] flex flex-col lg:flex-row items-center'>
             <Box className='w-full flex flex-col gap-[50px] h-full p-[20px] items-center justify-center'>
               <div className="flex flex-col gap-[20px]">
                 <div className="flex flex-col gap-3">
@@ -17,7 +23,7 @@ const HowItWorks = () => {
 
               <div className="flex flex-col gap-4">
                 {howItWorksList.map((list) => (
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4" key={list.name}>
                   <div className="w-[40px] h-[44px] pt-1 rounded-[12px] bg-[#0284C7CC]"/>
 
                   <div className="flex flex-col gap-1">
@@ -29,14 +35,28 @@ const HowItWorks = () => {
               </div>
 
                 <div className="flex items-center gap-4">
-                  <Button className='bg-[#FFFFFF] font-[400] px-[20px] w-[151px] text-[#171717] leading-[24px]'>Play</Button>
+                  <Button className='font-[400] px-[20px] w-[151px] text-[#171717] leading-[24px]'>Get started</Button>
                   <Button className='border-[0.2px] border-[#ffffff38] bg-transparent hover:bg-transparent font-[400] px-[20px]'>Learn more</Button>
                 </div>
               </div>
             </Box>
 
+              {/* SECTION IMAGE AND CARD */}
             <Box className='w-full'>
-              <Text>R</Text>
+              <Flex className='w-full md:w-[500px] mx-auto lg:h-[390px] flex flex-col gap-4 rounded-[16px] bg-[#0000004D] p-4'>
+                <div className="w-[280px] lg:w-[500px] h-[280px] relative">
+                  <Image src={HIWorks} alt='' fill className='w-full'  />
+                </div>
+
+                 <div className="flex items-center justify-between gap-3 w-full">
+                  {howItWorksCardList.map((card, index) => (
+                    <div className="w-[160px] h-[68px] flex flex-col items-center justify-center bg-[#2D2D3E] rounded-[12px]" key={index}>
+                      <Text className='font-[500] text-[20px] leading-[28px] text-[#fff]'>{card.name}</Text>
+                      <Text className='text-[#FFFFFF99] text-[12px] font-[400]'>{card.desc}</Text>
+                    </div>
+                  ))}
+                 </div>
+              </Flex>
             </Box>
         </Flex>
     </div>

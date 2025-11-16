@@ -70,3 +70,18 @@ export const howItWorksList = [
   },
 ]
 
+
+export const howItWorksCardList = [
+  {
+    name: '500+',
+    desc: 'Events daily'
+  },
+  {
+    name: '2m',
+    desc: 'Avg payout'
+  },
+  {
+    name: '24/7',
+    desc: 'Support'
+  },
+]

@@ -7,8 +7,8 @@ import React from 'react'
 import HowItWorks from "./HowItWorks";
 
 const PopularGames = () => {
-  return (
-    <div className='min-h-[900px] bg-[#070A1B] w-full px-2'>
+  return ( 
+    <div className='min-h-[900px] bg-[#070A1B] w-full flex flex-col gap-8 py-6'>
       <Flex className='flex flex-col p-4 gap-[23px]'>
         <Box className='w-full lg:w-[800px] flex flex-col lg:flex-row justify-between mt-[100px]'>
           <div className="flex flex-col w-full">
@@ -47,6 +47,11 @@ const PopularGames = () => {
       </Flex>
 
       <HowItWorks/>
+
+      <Box className='w-[351px] lg:w-[700px] rounded-[16px] p-[24px] bg-[#2D2D3E] flex flex-col gap-2 lg:flex-row items-center justify-between mx-auto mt-[100px]'>
+          <Text className='text-[14px] font-[400] leading-[20px]'>Licensed operator. Fair play guaranteed.</Text>
+          <Text className='text-[14px] font-[400] leading-[20px]'>Average withdrawal time: 7 minutes.</Text>
+      </Box>
     </div>
   )
 }

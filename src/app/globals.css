@@ -188,3 +188,31 @@ body {
   }
 }
 
+
+progress.progress-custom {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: none;
+  background-color: #e5e7eb; /* Tailwind gray-300 */
+  border-radius: 9999px;
+  overflow: hidden;
+  height: 8px;
+}
+
+/* Chrome / Edge */
+progress.progress-custom::-webkit-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+}
+
+progress.progress-custom::-webkit-progress-value {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  border-radius: 9999px;
+}
+
+/* Firefox */
+progress.progress-custom::-moz-progress-bar {
+  background-color: #3b82f6;
+  border-radius: 9999px;
+}
