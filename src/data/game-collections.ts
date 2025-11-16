@@ -53,3 +53,20 @@ export const popularGamesList = [
   },
 
 ]
+
+
+export const howItWorksList = [
+  {
+    name: '1. Create your account',
+    desc: 'Sign up with email or phone. Verification takes seconds.'
+  },
+  {
+    name: '2. Fund your wallet',
+    desc: 'Add funds securely via cards, bank transfer or pay apps.'
+  },
+  {
+    name: '3. Play & withdraw',
+    desc: 'Pick a game, place bets and withdraw instantly when you win.'
+  },
+]
+

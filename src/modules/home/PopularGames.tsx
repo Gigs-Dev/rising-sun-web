@@ -11,20 +11,22 @@ const PopularGames = () => {
     <div className='min-h-[900px] bg-[#070A1B] w-full px-2'>
       <Flex className='flex flex-col p-4 gap-[23px]'>
         <Box className='w-full lg:w-[800px] flex flex-col lg:flex-row justify-between mt-[100px]'>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full">
             <Text className='text-[32px]'>Popular games</Text>
             <Text className='text-[16px] md:text-[20px]'>Play crowd favorites or discover something new.</Text>
           </div>
 
-          <Button className='bg-[transparent] border border-[#323444] mt-[30px] px-5 py-3 flex w-[170px] ml-[160px] md:ml-[80%] lg:ml-0'>
-            <Text className='text-center text-[16px]'>Browse all</Text>
-          </Button>
+          <div className="w-full flex items-end justify-end">
+            <Button className='bg-[transparent] border border-[#323444] mt-[30px] px-5 py-3 flex w-[170px]'>
+              <Text className='text-center text-[16px]'>Browse all</Text>
+            </Button>
+          </div>
         </Box>
 
         <div className="flex flex-col lg:flex-row items-center gap-5 justify-center">
           {
             popularGamesList.map((game) => (
-            <Box className='flex flex-col gap-2 h-[328px] w-[353px] bg-[#2D2D3E] rounded-[20px]'>
+            <Box className='flex flex-col gap-2 h-[328px] w-[353px] bg-[#2D2D3E] rounded-[20px]' key={game.desc}>
               <div className="flex-1 overflow-y-hidden">
                 <Image src={game.icon} alt='' width={353} height={178} className='rounded-lg' />
               </div>
