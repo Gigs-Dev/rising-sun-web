@@ -16,7 +16,7 @@ const HIWorksList = () => {
         <div className="flex flex-col gap-4">
         {howItWorksList.map((list) => (
         <div className="flex items-center gap-4" key={list.name}>
-            <div className="w-[40px] h-[44px] pt-1 rounded-[12px] bg-[#0284C7CC]"/>
+            <div className="w-[50px] h-[44px] pt-1 rounded-[12px] bg-[#0284C7CC]"/>
 
             <div className="flex flex-col gap-1">
             <Text className='text-[16px] leading-[24px] font-[500] text-[#FFFFFF]'>{list.name}</Text>
