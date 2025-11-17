@@ -76,29 +76,44 @@ const Header = () => {
             >
 
             {TopBarData.map((item) => (
-                <Box
+                <Link href={item.link}
                 key={item.name}
                 className={`text-[.9rem] cursor-pointer pt-1 ${
                   isMenuOpen ? "py-[20px]" : "py-[0px]"
                 } font-regular`}
                 >
                   {item.name}
-                </Box>
-            ))}
-            <Button className="inline-flex lg:hidden  bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer">
-                <Image
-                  priority
-                  src={userIcon}
-                  alt="Sign-In"
-                  width={32}
-                  height={32}
-                />
-                <Link href="/sign-in">
-                  <Text className="text-[.9rem] text-[#fff] text-center font-regular pt-1">
-                    Sign In
-                  </Text>
                 </Link>
-              </Button>
+            ))}
+            {token ?
+            (
+            <Box className="flex lg:hidden  items-center gap-2">
+              <div className="bg-[#166594] h-[60px] w-[60px] rounded-full flex items-center justify-center">
+                <Text className="text-[#ffd] text-[28px] leading-[100%] font-[500] text-center flex items-center justify-center mt-2">IO</Text>
+              </div>
+
+              <div className="flex flex-col gap-y-2">
+                <Text className="text-[#fff] text-[14px] font-[400] leading-[100%]">Omejua Ifeanyi</Text>
+                <Link href='/' className="text-[#779CB2] text-[13px] font-[400] leading-[100%]">View Profile</Link>
+              </div>
+            </Box>
+            ): 
+            (
+              <Button className="inline-flex lg:hidden  bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer">
+                  <Image
+                    priority
+                    src={userIcon}
+                    alt="Sign-In"
+                    width={32}
+                    height={32}
+                  />
+                  <Link href="/sign-in">
+                    <Text className="text-[.9rem] text-[#fff] text-center font-regular pt-1">
+                      Sign In
+                    </Text>
+                  </Link>
+                </Button>
+            )}
       </Flex>
   
 
@@ -123,12 +138,16 @@ const Header = () => {
               </Link>
             </HStack>
           ) : (
-            <>
-            <div className="flex items-center justify-center rounded-full h-[45px] w-[45px] border-[#dff] border-2 cursor-pointer" onClick={handleLogout}>
-              <span className="text-3xl mt-2 font-[500] text-center flex items-center justify-center">ZE</span>
-            </div>
-            {/* <Text onClick={handleLogout} className="cursor-pointer">Log out</Text> */}
-            </>
+            <Box className="hidden lg:flex items-center gap-2">
+              <div className="bg-[#166594] h-[60px] w-[60px] rounded-full flex items-center justify-center">
+                <Text className="text-[#ffd] text-[28px] leading-[100%] font-[500] text-center flex items-center justify-center mt-2">IO</Text>
+              </div>
+
+              <div className="flex flex-col gap-y-2">
+                <Text className="text-[#fff] text-[14px] font-[400] leading-[100%]">Omejua Ifeanyi</Text>
+                <Link href='/' className="text-[#779CB2] text-[13px] font-[400] leading-[100%]">View Profile</Link>
+              </div>
+            </Box>
           )}
       </Flex>
     </Flex>

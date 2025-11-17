@@ -5,10 +5,10 @@ export const TopBarData = [
  },
   {
     name: "How to play?",
-    link: "about",
+    link: "how-to-play",
   },
   {
     name: "News & Updates",
-    link: "about",
+    link: "#",
   },
 ];

@@ -21,7 +21,7 @@ const HeroBox = () => {
 
 
   return (
-    <Box className="my-[4rem] lg:my-[6rem] max-w-[1400px] w-full mx-auto px-2">
+    <Box className="max-w-[1400px] w-full mx-auto px-2">
       <HStack className="flex flex-col-reverse mx-auto lg:flex-row lg:justify-between">
         {/* left */}
         <Box className="py-[2rem]">
