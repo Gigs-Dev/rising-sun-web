@@ -1,5 +1,5 @@
 import { howItWorksList } from '@/data/game-collections';
-import { Button } from '@/ui/primitives/buttons/Button';
+import Button from '@/ui/primitives/buttons/Button';
 import { Text } from '@/ui/primitives/typography';
 import { Box } from '@/ui/primitives/ui-layout';
 import React from 'react'
@@ -27,8 +27,8 @@ const HIWorksList = () => {
         </div>
 
         <div className="flex items-center gap-4">
-            <Button className='font-[400] px-[20px] w-[151px] text-[#171717] leading-[24px]'>Get started</Button>
-            <Button className='border-[0.2px] border-[#ffffff38] bg-transparent hover:bg-transparent font-[400] px-[20px]'>Learn more</Button>
+          <Button className='font-[300] bg-[#fff] px-[20px] w-[151px] text-[#000] leading-[24px]'>Get started</Button>
+            <Button className='border-[0.2px] border-[#ffffff38] bg-transparent font-[400] px-[20px]'>Learn more</Button>
         </div>
         </div>
     </Box>

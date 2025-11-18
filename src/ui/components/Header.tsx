@@ -15,7 +15,7 @@ import { TopBarData } from "@/data/top-bar-list";
 // import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import useUserStore from "@/store/state/use-user-state";
 import { useRouter } from "next/navigation";
-import { Button } from "../primitives/buttons/Button";
+import Button from "../primitives/buttons/Button";
 
 
 
