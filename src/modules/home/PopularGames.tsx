@@ -1,10 +1,11 @@
 import { popularGamesList } from '@/data/game-collections';
-import { Button } from '@/ui/primitives/buttons/Button';
+import Button from '@/ui/primitives/buttons/Button';
 import { Text } from '@/ui/primitives/typography';
 import { Box, Flex } from '@/ui/primitives/ui-layout';
 import Image from 'next/image';
 import React from 'react'
 import HowItWorks from "./HowItWorks";
+
 
 const PopularGames = () => {
   return ( 

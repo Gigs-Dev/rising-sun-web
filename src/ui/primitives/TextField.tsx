@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { FC, forwardRef, InputHTMLAttributes } from "react";
+import React, { FC, forwardRef, InputHTMLAttributes, TextareaHTMLAttributes } from "react";
 
 
 interface IType {
@@ -45,7 +45,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           className={`
             w-full rounded-lg border px-3 py-2 outline-none transition-all 
-            focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
             ${error ? "border-red-500" : ""} 
             ${className}
           `}
@@ -63,3 +62,45 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 );
 
 Input.displayName = "Input";
+
+
+
+
+interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  label?: string;
+  error?: string;
+  wrapperClass?: string;
+}
+
+
+export const TextArea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ label, error, className = "", wrapperClass = "", ...props }, ref) => {
+    return (
+      <div className={`flex flex-col gap-1 ${wrapperClass}`}>
+        {label && (
+          <label className="text-sm font-medium text-[#fff]">
+            {label}
+          </label>
+        )}
+
+        <textarea
+          ref={ref}
+          className={`
+            w-full rounded-lg border px-3 py-2 outline-none transition-all 
+            ${error ? "border-red-500" : ""} 
+            ${className}
+          `}
+          {...props}
+        />
+
+        {error && (
+          <p className="text-xs text-red-500 mt-[-2px]">
+            {error}
+          </p>
+        )}
+      </div>
+    );
+  }
+);
+
+TextArea.displayName = "TextArea";
