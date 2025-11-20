@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from "@/ui/primitives/buttons/Button";
+import Button from "@/ui/primitives/buttons/Button";
 import { Text } from "@/ui/primitives/typography";
 import { Box } from "@/ui/primitives/ui-layout";
 import { useAuthMutation } from "@/util/api";
@@ -110,7 +110,6 @@ const AuthForm = ({type}: AuthType) => {
           <Button
             type="submit"
             className="w-full"
-            variant="primary"
             disabled={mutation.isPending}
           >
           {mutation.isPending && <Loader/>}{" "}
