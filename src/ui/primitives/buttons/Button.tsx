@@ -28,7 +28,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             px-4 py-2 font-medium rounded-md 
             focus:outline-none focus:ring-2 
             focus:ring-indigo-500 focus:ring-offset-2
-            inline-flex items-center justify-center gap-2
+            flex items-center justify-center gap-2
             ${disabled || loading ? "opacity-60 cursor-not-allowed" : ""}
             ${className}
           `}
@@ -45,10 +45,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           )}
 
           {/* Left icon (hidden when loading) */}
-          {!loading && leftIcon && <span>{leftIcon}</span>}
+          {!loading && leftIcon && <span className="">{leftIcon}</span>}
 
           {/* Button text */}
-          <span>{loading ? "Loading..." : children}</span>
+          <span className="mt-1">{loading ? "Loading..." : children}</span>
 
           {/* Right icon (hidden when loading) */}
           {!loading && rightIcon && <span>{rightIcon}</span>}
