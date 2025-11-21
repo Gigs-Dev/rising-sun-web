@@ -78,6 +78,7 @@ const Header = () => {
             {TopBarData.map((item) => (
                 <Link href={item.link}
                 key={item.name}
+                onClick={() => setIsMenuOpen(false)}
                 className={`text-[.9rem] cursor-pointer pt-1 ${
                   isMenuOpen ? "py-[20px]" : "py-[0px]"
                 } font-regular`}
@@ -85,6 +86,8 @@ const Header = () => {
                   {item.name}
                 </Link>
             ))}
+
+            {/* MOBILE */}
             {token ?
             (
             <Box className="flex lg:hidden  items-center gap-2">
@@ -99,31 +102,30 @@ const Header = () => {
             </Box>
             ): 
             (
-              <Button className="inline-flex lg:hidden  bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer">
-                  <Image
+            <Link href="/sign-in">
+              <Button leftIcon={<Image src={userIcon} alt="" width={32} height={32}/>} className="inline-flex lg:hidden  bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer">
+                  {/* <Image
                     priority
                     src={userIcon}
                     alt="Sign-In"
                     width={32}
                     height={32}
-                  />
-                  <Link href="/sign-in">
+                  /> */}
                     <Text className="text-[.9rem] text-[#fff] text-center font-regular pt-1">
                       Sign In
                     </Text>
-                  </Link>
                 </Button>
+                </Link>
             )}
       </Flex>
   
 
-          {/*  */}
+          {/* DESKTOP */}
           {( !token ) ? (
-            <HStack
-              className={`${
+          <Link href="/sign-in" className={`${
                 isMenuOpen ? "border border-[#555]" : ""
-              } hidden lg:inline-flex bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer`}
-            >
+              } hidden lg:inline-flex bg-[#166594] items-center justify-center w-[181px] h-[51px] text-center py-[.4rem] rounded-[10px] px-[1.3rem] cursor-pointer`}>
+            {/* <HStack> */}
               <Image
                 priority
                 src={userIcon}
@@ -131,12 +133,11 @@ const Header = () => {
                 width={32}
                 height={32}
               />
-              <Link href="/sign-in">
                 <Text className="text-[.9rem] text-[#fff] text-center font-regular pt-1">
                   Sign In
                 </Text>
-              </Link>
-            </HStack>
+            {/* </HStack> */}
+            </Link>
           ) : (
             <Box className="hidden lg:flex items-center gap-2">
               <div className="bg-[#166594] h-[60px] w-[60px] rounded-full flex items-center justify-center">
@@ -145,7 +146,7 @@ const Header = () => {
 
               <div className="flex flex-col gap-y-2">
                 <Text className="text-[#fff] text-[14px] font-[400] leading-[100%]">Omejua Ifeanyi</Text>
-                <Link href='/' className="text-[#779CB2] text-[13px] font-[400] leading-[100%]">View Profile</Link>
+                <Link href='/user-profile' className="text-[#779CB2] text-[13px] font-[400] leading-[100%]">View Profile</Link>
               </div>
             </Box>
           )}

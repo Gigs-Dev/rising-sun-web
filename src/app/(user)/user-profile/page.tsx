@@ -33,7 +33,11 @@ const UserProfile = () => {
                     </div>
 
                     <div className="flex items-center gap-2 w-full">
-                        <Button leftIcon={<MoveDownRight style={{height: '15px', color: '#7DD3FC'}} />} className='bg-[#0EA5E933] w-full flex items-center justify-center text-center'>Deposit</Button>
+                        <Button leftIcon={<MoveDownRight style={{height: '15px', color: '#7DD3FC'}} />} className='bg-[#0EA5E933] w-full flex items-center justify-center text-center'>
+                            <Link href='/deposit' className='w-full h-full'>
+                            Deposit
+                            </Link>
+                        </Button>
 
                         <Button leftIcon={<PanelTopClose style={{height: '15px', color: '#7DD3FC'}}/>} className='bg-[#6366F133] w-full'>Withdraw</Button>
                     </div>
