@@ -1,14 +1,15 @@
 import Button from '@/ui/primitives/buttons/Button';
 import { Box, Flex } from '@/ui/primitives/ui-layout';
 import { Span, Text } from '@/ui/primitives/typography';
+import TransactionHistory from './sections/TransactionHistory';
+import UserInfo from './sections/UserInfo';
 import Image from 'next/image';
 import React from 'react'
 
 
 // SVGs
 import user from '@/svgs/new/user-profile-pic.svg';
-import svg from '@/svgs/new/SVG.svg'
-import { MoveDownRight, PanelTopClose, ChevronRight } from 'lucide-react';
+import { MoveDownRight, PanelTopClose } from 'lucide-react';
 import Link from 'next/link';
 
 
@@ -45,48 +46,17 @@ const UserProfile = () => {
 
 
                 {/* KYC Section */}
-                <Box className='bg-[#FFFFFF08] flex border border-[#FFFFFF1A] rounded-[12px] p-3 gap-3 w-full lg:w-[387px] '>
-                    <div className="bg-[#FFFFFF1A] border border-[#FFFFFF1A] rounded-[12px] p-2 w-[32px] h-[32px]">
-                        <Image src={svg} alt='' width={16} height={16} />
-                    </div>
+            <UserInfo title='KYC' desc='Increase your limits by verifying your identity.' others='Coming soon' />
 
-                    <Box className="flex flex-col gap-1">
-                        <Text className="text-[18px] text-[#FFFFFF]">KYC</Text>
-                        <Span 
-                            text='Increase your limits by verifying your identity.' className='text-[14px] text-[#FFFFFFB2] w-2/3' />
-                    </Box>
-
-                    <Span 
-                        text='Coming soon' 
-                        className='text-[#67E8F9] bg-[#22D3EE33] text-[10px] leading-[16.5px] text-center flex items-center justify-center pt-[4px] px-[4px] py-1 rounded-2xl w-[85px] h-fit' />
-                </Box>
-
-                    {/* Bank information */}
-                <Flex className='bg-[#FFFFFF08] border border-[#FFFFFF1A] rounded-[12px] p-3 gap-3 w-full lg:w-[387px]'>
-                    <div className="bg-[#FFFFFF1A] border border-[#FFFFFF1A] rounded-[12px] p-2 w-[32px] h-[32px]">
-                        <Image src={svg} alt='' width={16} height={16} />
-                    </div>
-
-                    <Box className="flex flex-col gap-1">
-                        <Text className="text-[18px] text-[#FFFFFF]">Bank Information</Text>
-                        <Span 
-                            text='Update your bank details for cash withdrawals' className='text-[14px] text-[#FFFFFFB2] w-2/3' />
-                    </Box>
-                </Flex>
-            </section>
+            {/* Bank information */}
+            <UserInfo title='Bank Information' desc='Update your bank details for cash withdrawals' className='items-center'/>
+        </section>
 
             {/* Transaction history */}
-            <Box className='max-w-[800px] w-full rounded-[16px] flex flex-col'>
-                <Flex className='justify-between bg-[#FFFFFF08] px-[20px] py-[16px] rounded-[16px]' >
-                    <Text className='text-[#FFFFFF] text-[18px] leading-[28px] font-semibold tracking-[0.45%]'>Transaction History</Text>
+            <div className="w-full">
+                <TransactionHistory/>
+            </div>
 
-                    <Button className='text-[#FFFFFFB2] text-[14px] leading-[20px] tracking-[0%] font-[400]' rightIcon={<ChevronRight />}>
-                        <Link href='/transaction'>
-                            View all
-                        </Link>
-                    </Button>
-                </Flex>
-            </Box>
         </Box>
 
   )

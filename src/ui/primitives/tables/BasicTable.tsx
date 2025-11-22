@@ -1,0 +1,36 @@
+import React, { FC } from 'react';
+
+
+interface ITable {
+    columns: {
+        header?: string; 
+        accessor: string; 
+        className?: string
+    }[];
+    data: any[];
+    renderRow: any;
+    status?: 'pending' | 'failed' | 'succeeded'
+}
+
+const BasicTable:FC<ITable> = ({columns, renderRow, data, status}) => {
+  return (
+    <table className='mt-4 w-full'>
+        {columns && <thead className='text-left text-[#242424] text-sm bg-[#E9E7EB] w-full rounded-lg'>
+            {columns?.map((col) => (
+                <th className={`${col.className} p-3`} key={col.accessor}>{col.header}</th>
+            ))}
+        </thead>}
+
+        <tbody>
+            { data?.map((item) => renderRow(item))}
+            {/* <span className="flex w-full justify-center items-center m-auto">
+                {status === 'pending' && 
+                    <CircularProgress  sx={{display: 'flex', margin: 'auto'}}/>
+                }
+            </span> */}
+        </tbody>
+    </table>
+  )
+}
+
+export default BasicTable;
