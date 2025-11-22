@@ -15,11 +15,15 @@ interface ITable {
 const BasicTable:FC<ITable> = ({columns, renderRow, data, status}) => {
   return (
     <table className='mt-4 w-full'>
-        {columns && <thead className='text-left text-[#242424] text-sm bg-[#E9E7EB] w-full rounded-lg'>
-            {columns?.map((col) => (
-                <th className={`${col.className} p-3`} key={col.accessor}>{col.header}</th>
-            ))}
-        </thead>}
+        { columns &&
+        <thead>
+            <tr className='text-left w-full rounded-lg'>
+                {columns?.map((col) => (
+                    <td className={`${col.className} p-3`} key={col.accessor}>{col.header}</td>
+                ))}
+            </tr>
+        </thead>
+        }
 
         <tbody>
             { data?.map((item) => renderRow(item))}
