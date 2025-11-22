@@ -5,7 +5,7 @@ import { Span, Text } from '@/ui/primitives/typography';
 import { Flex } from '@/ui/primitives/ui-layout';
 
 // ICONS
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Landmark } from 'lucide-react';
 import BankIc from '@/svgs/new/deposit.svg'
 import Image from 'next/image';
 
@@ -15,7 +15,8 @@ const Deposit = () => {
   return (
    <Flex className='flex-col justify-center h-[70vh] gap-5 py-3'>
         <div className="flex items-center justify-center bg-[#FFFFFF0D] w-[65px] h-[65px] rounded-[8px]">
-            <Image src={BankIc} alt='' width={50} height={50}/>
+            <Landmark style={{height: '50px', width: '50px'}}/>
+            {/* <Image src={} alt='' width={50} height={50}/> */}
         </div>
 
         <Text className='text-[20px] leading-[26px] tracking-[0%]'>DEPOSIT FUNDS</Text>
